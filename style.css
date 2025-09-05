@@ -131,3 +131,54 @@ input:focus, select:focus {
   margin-top: 15px;
   font-size: 14px;
 }
+/* How it works */
+.how-it-works {
+  background: #111827;
+  color: #f9fafb;
+  padding: 100px 20px;
+  text-align: center;
+}
+.how-it-works h2 {
+  font-size: clamp(36px, 5vw, 54px);
+  font-weight: 800;
+  margin-bottom: 60px;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+@media (max-width: 900px) {
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+.step {
+  background: #1f2937;
+  padding: 40px 20px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+.step-number {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 60px;
+  margin-bottom: 20px;
+}
+.step h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.step p {
+  color: #d1d5db;
+  font-size: 16px;
+  line-height: 1.5;
+}
