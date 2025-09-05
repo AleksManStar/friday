@@ -4,41 +4,29 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Original Auto Parts - Best Offers from Dealers</title>
-  <meta name="description" content="Find genuine auto parts directly from official manufacturers and dealers. Submit a request and get the best offer for your car parts." />
+  <meta name="description" content="Find genuine auto parts directly from official manufacturers and dealers. Submit a request and get the best deal for your car parts." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="hero">
+  <!-- Hero -->
+  <header class="hero">
     <div class="container hero-grid">
-
-      <!-- Left colorful block -->
       <div class="hero-text">
+        <img src="assets/logo.svg" alt="Company logo" class="logo">
         <h1>Genuine Auto Parts</h1>
         <p class="lead">
-          We connect you with manufacturers and official dealers to get the 
-          <strong>best offers on OEM spare parts</strong> for your car.
+          Get <strong>original spare parts</strong> from certified manufacturers 
+          and official dealers at the best price.
         </p>
-        <div class="features">
-          <div class="feature-block">
-            <h3>OEM Quality</h3>
-            <p>Only original spare parts from certified dealers.</p>
-          </div>
-          <div class="feature-block">
-            <h3>Global Network</h3>
-            <p>Access to worldwide dealer and manufacturer network.</p>
-          </div>
-          <div class="feature-block">
-            <h3>Best Price</h3>
-            <p>We compare offers and provide you with the best option.</p>
-          </div>
-        </div>
+        <ul class="points">
+          <li>OEM quality only</li>
+          <li>Global dealer network</li>
+          <li>Fast delivery options</li>
+        </ul>
       </div>
-
-      <!-- Right form card -->
       <aside class="form-card">
         <h2>Request a Quote</h2>
-        <p>Fill in the form and we will contact you with the best offers.</p>
         <form id="requestForm" action="https://formspree.io/f/FORM_ID" method="POST">
           <label>
             <span>Name</span>
@@ -79,39 +67,39 @@
           <p class="status" hidden></p>
         </form>
       </aside>
-
     </div>
-        </div>
-  </main>
+  </header>
 
-  <!-- How it works block -->
+  <!-- How it works -->
   <section class="how-it-works">
     <div class="container">
       <h2>How it Works</h2>
       <div class="steps">
         <div class="step">
-          <span class="step-number">1</span>
+          <img src="assets/icons/request.svg" alt="Request icon">
           <h3>Submit Request</h3>
-          <p>Fill out the form with your car details and the part you need.</p>
+          <p>Fill out the form with your car brand, model and needed part.</p>
         </div>
         <div class="step">
-          <span class="step-number">2</span>
+          <img src="assets/icons/offers.svg" alt="Offers icon">
           <h3>Get Offers</h3>
           <p>We connect you with official dealers and manufacturers worldwide.</p>
         </div>
         <div class="step">
-          <span class="step-number">3</span>
+          <img src="assets/icons/deal.svg" alt="Deal icon">
           <h3>Get Best Deal</h3>
-          <p>Choose the most suitable option with guaranteed OEM quality.</p>
+          <p>Receive the most competitive price with guaranteed OEM quality.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <script src="script.js"></script>
-</body>
-</html>
-  </main>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Original Auto Parts · All rights reserved</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
