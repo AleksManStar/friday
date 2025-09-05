@@ -1,9 +1,10 @@
 :root {
-  --bg: #0f172a;
-  --card: #1e293b;
+  --bg-gradient: linear-gradient(135deg, #0f172a, #1e293b 40%, #334155 100%);
+  --card-bg: #1e293b;
   --text: #f1f5f9;
   --muted: #94a3b8;
   --accent: #f97316;
+  --accent-hover: #ea580c;
   --radius: 12px;
 }
 
@@ -11,9 +12,13 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: var(--bg);
+  background: var(--bg-gradient);
   color: var(--text);
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Layout */
@@ -38,6 +43,7 @@ body {
 h1 {
   font-size: clamp(28px, 4vw, 42px);
   margin-bottom: 20px;
+  color: #fff;
 }
 .lead {
   font-size: 18px;
@@ -50,22 +56,23 @@ h1 {
 }
 .points li {
   margin: 10px 0;
-  padding-left: 22px;
+  padding-left: 28px;
   position: relative;
 }
 .points li::before {
-  content: "✓";
+  content: "✔";
   color: var(--accent);
+  font-weight: bold;
   position: absolute;
   left: 0;
 }
 
 /* Right form */
 .form-card {
-  background: var(--card);
-  padding: 24px;
+  background: var(--card-bg);
+  padding: 28px;
   border-radius: var(--radius);
-  box-shadow: 0 10px 20px rgba(0,0,0,.5);
+  box-shadow: 0 10px 30px rgba(0,0,0,.5);
 }
 .form-card h2 {
   margin-top: 0;
@@ -109,5 +116,9 @@ input:focus {
   transition: background 0.2s;
 }
 .btn:hover {
-  background: #ea580c;
+  background: var(--accent-hover);
+}
+.status {
+  margin-top: 15px;
+  font-size: 14px;
 }
