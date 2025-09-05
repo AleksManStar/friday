@@ -4,22 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Original Auto Parts - Best Offers from Dealers</title>
-  <meta name="description" content="We help you find original spare parts directly from official manufacturers and dealers. Submit a request and get the best offer for your car parts." />
-  <meta name="keywords" content="original auto parts, genuine car parts, spare parts from dealers, OEM car parts" />
+  <meta name="description" content="Find original spare parts directly from official manufacturers and dealers. Submit a request and get the best offer for your car parts." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <main class="hero">
     <div class="container hero-grid">
-      
-      <!-- Left text block -->
+
+      <!-- Left block -->
       <div class="hero-text">
         <h1>Find Genuine Auto Parts</h1>
         <p class="lead">
           We connect you with manufacturers and official dealers to get the 
-          <strong>best offers on original spare parts</strong> for your car.  
-          Submit a request and we will send you the top options available.
+          <strong>best offers on original spare parts</strong> for your car.
         </p>
         <ul class="points">
           <li>Official OEM parts only</li>
@@ -28,11 +26,11 @@
         </ul>
       </div>
 
-      <!-- Right form block -->
+      <!-- Right block -->
       <aside class="form-card">
         <h2>Request a Quote</h2>
-        <p>Fill in the form and get the best offer for your spare parts.</p>
-        <form action="https://formspree.io/f/FORM_ID" method="POST">
+        <p>Fill in the form and we will contact you with the best offers.</p>
+        <form id="requestForm" action="https://formspree.io/f/FORM_ID" method="POST">
           <label>
             <span>Name</span>
             <input type="text" name="name" required>
@@ -54,10 +52,13 @@
             <input type="text" name="part" required>
           </label>
           <button type="submit" class="btn">Submit Request</button>
+          <p class="status" hidden></p>
         </form>
       </aside>
 
     </div>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
