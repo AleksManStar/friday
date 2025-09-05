@@ -1,1 +1,6 @@
-gg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40">
+  <rect width="200" height="40" rx="6" fill="#1e40af"/>
+  <text x="100" y="25" font-size="18" fill="white" text-anchor="middle" font-family="Inter, sans-serif">
+    Original Auto Parts
+  </text>
+</svg>
