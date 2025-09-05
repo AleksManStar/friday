@@ -1,120 +1,63 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Брошюра: как не ошибиться в выборе подрядчика</title>
-  <meta name="description" content="Скачайте бесплатную брошюру-инструкцию по выбору подрядчика для разработки Landing Page." />
-  <meta name="theme-color" content="#0f172a" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Original Auto Parts - Best Offers from Dealers</title>
+  <meta name="description" content="We help you find original spare parts directly from official manufacturers and dealers. Submit a request and get the best offer for your car parts." />
+  <meta name="keywords" content="original auto parts, genuine car parts, spare parts from dealers, OEM car parts" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="logo" href="#">smartlanding</a>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container hero__grid">
-        <!-- Левая колонка: текст -->
-        <div class="hero__text">
-          <p class="eyebrow">Мы разработали брошюру-инструкцию</p>
-          <h1>Как не ошибиться в выборе подрядчика<br><span class="sub">для разработки landing page</span></h1>
-          <p class="lead">
-            В ней собраны нюансы, на которые важно обратить внимание: сроки,
-            бюджет, критерии качества и список вопросов для собеседования.
-          </p>
-          <ul class="bullets">
-            <li>Чек-лист из 20 пунктов</li>
-            <li>Шаблон технического задания</li>
-            <li>Примеры договоров и KPI</li>
-          </ul>
-        </div>
-
-        <!-- Правая колонка: форма -->
-        <aside class="card form-card" aria-labelledby="form-title">
-          <h2 id="form-title">Оставьте заявку</h2>
-          <p class="card__sub">И получите электронную версию брошюры на e-mail</p>
-
-          <!-- ВСТАВЬ свой endpoint в action (см. инструкции ниже) -->
-          <form id="contactForm" action="https://formspree.io/f/FORM_ID" method="POST" novalidate>
-            <label class="field">
-              <span>Имя</span>
-              <input type="text" name="name" autocomplete="name" required />
-            </label>
-
-            <label class="field">
-              <span>Телефон</span>
-              <input type="tel" name="phone" autocomplete="tel" pattern="^[+0-9\s\-()]{6,}$" required />
-            </label>
-
-            <label class="field">
-              <span>E-mail</span>
-              <input type="email" name="email" autocomplete="email" required />
-            </label>
-
-            <label class="checkbox">
-              <input type="checkbox" name="consent" required />
-              <span>Согласен(на) с обработкой персональных данных</span>
-            </label>
-
-            <button class="btn" type="submit">Отправить заявку</button>
-
-            <p class="form-note">Мы не рассылаем спам. Можно отписаться в один клик.</p>
-            <p class="status" role="status" aria-live="polite" hidden></p>
-          </form>
-        </aside>
-      </div>
-    </section>
-
-    <section class="content">
-      <div class="container">
-        <h2>Написать отзыв о работе</h2>
-        <p>
-          Эта обратная форма позволяет клиентам оставлять отзывы о товаре или услуге,
-          а владельцу — получать информацию об уровне сервиса и качестве проекта.
+  <main class="hero">
+    <div class="container hero-grid">
+      
+      <!-- Left text block -->
+      <div class="hero-text">
+        <h1>Find Genuine Auto Parts</h1>
+        <p class="lead">
+          We connect you with manufacturers and official dealers to get the 
+          <strong>best offers on original spare parts</strong> for your car.  
+          Submit a request and we will send you the top options available.
         </p>
+        <ul class="points">
+          <li>Official OEM parts only</li>
+          <li>Worldwide dealer network</li>
+          <li>Best price guarantee</li>
+        </ul>
       </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <small>© 2025 smartlanding · <a href="#">Политика конфиденциальности</a></small>
+      <!-- Right form block -->
+      <aside class="form-card">
+        <h2>Request a Quote</h2>
+        <p>Fill in the form and get the best offer for your spare parts.</p>
+        <form action="https://formspree.io/f/FORM_ID" method="POST">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            <span>Phone</span>
+            <input type="tel" name="phone" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            <span>Car Brand & Model</span>
+            <input type="text" name="car" required>
+          </label>
+          <label>
+            <span>Part Needed</span>
+            <input type="text" name="part" required>
+          </label>
+          <button type="submit" class="btn">Submit Request</button>
+        </form>
+      </aside>
+
     </div>
-  </footer>
-
-  <script>
-    // Мини-скрипт для красивых сообщений об отправке
-    const form = document.getElementById('contactForm');
-    const statusEl = form.querySelector('.status');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      statusEl.hidden = false;
-      statusEl.textContent = 'Отправляем…';
-
-      try {
-        const resp = await fetch(form.action, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json' },
-          body: new FormData(form)
-        });
-
-        if (resp.ok) {
-          form.reset();
-          statusEl.textContent = 'Готово! Проверьте почту — брошюра уже в пути.';
-        } else {
-          statusEl.textContent = 'Не получилось отправить. Попробуйте ещё раз позже.';
-        }
-      } catch {
-        statusEl.textContent = 'Сеть недоступна. Повторите попытку.';
-      }
-    });
-  </script>
+  </main>
 </body>
 </html>
