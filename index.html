@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Original Auto Parts - Best Offers from Dealers</title>
-  <meta name="description" content="Find original spare parts directly from official manufacturers and dealers. Submit a request and get the best offer for your car parts." />
+  <meta name="description" content="Find genuine auto parts directly from official manufacturers and dealers. Submit a request and get the best offer for your car parts." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -12,21 +12,30 @@
   <main class="hero">
     <div class="container hero-grid">
 
-      <!-- Left block -->
+      <!-- Left colorful block -->
       <div class="hero-text">
-        <h1>Find Genuine Auto Parts</h1>
+        <h1>Genuine Auto Parts</h1>
         <p class="lead">
           We connect you with manufacturers and official dealers to get the 
-          <strong>best offers on original spare parts</strong> for your car.
+          <strong>best offers on OEM spare parts</strong> for your car.
         </p>
-        <ul class="points">
-          <li>Official OEM parts only</li>
-          <li>Worldwide dealer network</li>
-          <li>Best price guarantee</li>
-        </ul>
+        <div class="features">
+          <div class="feature-block">
+            <h3>OEM Quality</h3>
+            <p>Only original spare parts from certified dealers.</p>
+          </div>
+          <div class="feature-block">
+            <h3>Global Network</h3>
+            <p>Access to worldwide dealer and manufacturer network.</p>
+          </div>
+          <div class="feature-block">
+            <h3>Best Price</h3>
+            <p>We compare offers and provide you with the best option.</p>
+          </div>
+        </div>
       </div>
 
-      <!-- Right block -->
+      <!-- Right form card -->
       <aside class="form-card">
         <h2>Request a Quote</h2>
         <p>Fill in the form and we will contact you with the best offers.</p>
@@ -43,13 +52,28 @@
             <span>Email</span>
             <input type="email" name="email" required>
           </label>
-          <label>
-            <span>Car Brand & Model</span>
-            <input type="text" name="car" required>
-          </label>
+          <div class="two-cols">
+            <label>
+              <span>Brand</span>
+              <select id="brand" name="brand" required>
+                <option value="">Select brand...</option>
+                <option value="audi">Audi</option>
+                <option value="bmw">BMW</option>
+                <option value="mercedes">Mercedes-Benz</option>
+                <option value="toyota">Toyota</option>
+                <option value="volkswagen">Volkswagen</option>
+              </select>
+            </label>
+            <label>
+              <span>Model</span>
+              <select id="model" name="model" required>
+                <option value="">Select model...</option>
+              </select>
+            </label>
+          </div>
           <label>
             <span>Part Needed</span>
-            <input type="text" name="part" required>
+            <input type="text" name="part" placeholder="e.g. Brake pads, Oil filter" required>
           </label>
           <button type="submit" class="btn">Submit Request</button>
           <p class="status" hidden></p>
