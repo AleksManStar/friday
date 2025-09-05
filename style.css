@@ -1,8 +1,9 @@
 :root {
   --bg-gradient: linear-gradient(135deg, #0f172a, #1e293b 40%, #334155 100%);
-  --card-bg: #1e293b;
-  --text: #f1f5f9;
-  --muted: #94a3b8;
+  --card-bg: #f9fafb;
+  --text-dark: #1f2937;
+  --text-light: #f9fafb;
+  --muted: #6b7280;
   --accent: #f97316;
   --accent-hover: #ea580c;
   --radius: 12px;
@@ -13,7 +14,7 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: var(--bg-gradient);
-  color: var(--text);
+  color: var(--text-light);
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
@@ -31,7 +32,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  align-items: center;
+  align-items: stretch;
 }
 @media (max-width: 800px) {
   .hero-grid {
@@ -39,32 +40,36 @@ body {
   }
 }
 
-/* Left text */
-h1 {
+/* Left colorful block */
+.hero-text {
+  background: linear-gradient(160deg, #2563eb, #1e40af);
+  border-radius: var(--radius);
+  padding: 40px;
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-text h1 {
   font-size: clamp(28px, 4vw, 42px);
   margin-bottom: 20px;
-  color: #fff;
 }
-.lead {
+.hero-text .lead {
   font-size: 18px;
-  color: var(--muted);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
-.points {
-  list-style: none;
-  padding: 0;
+.features {
+  display: grid;
+  gap: 20px;
 }
-.points li {
-  margin: 10px 0;
-  padding-left: 28px;
-  position: relative;
+.feature-block {
+  background: rgba(255,255,255,0.1);
+  padding: 16px;
+  border-radius: var(--radius);
 }
-.points li::before {
-  content: "✔";
-  color: var(--accent);
-  font-weight: bold;
-  position: absolute;
-  left: 0;
+.feature-block h3 {
+  margin: 0 0 5px;
+  color: #fff;
 }
 
 /* Right form */
@@ -72,11 +77,11 @@ h1 {
   background: var(--card-bg);
   padding: 28px;
   border-radius: var(--radius);
-  box-shadow: 0 10px 30px rgba(0,0,0,.5);
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  color: var(--text-dark);
 }
 .form-card h2 {
   margin-top: 0;
-  margin-bottom: 10px;
 }
 .form-card p {
   color: var(--muted);
@@ -92,17 +97,21 @@ label span {
   margin-bottom: 5px;
   color: var(--muted);
 }
-input {
+input, select {
   width: 100%;
   padding: 12px;
   border-radius: var(--radius);
-  border: 1px solid #334155;
-  background: #0f172a;
-  color: var(--text);
+  border: 1px solid #d1d5db;
+  font-size: 15px;
 }
-input:focus {
+input:focus, select:focus {
   outline: 2px solid var(--accent);
   border-color: var(--accent);
+}
+.two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
 .btn {
   width: 100%;
