@@ -4,7 +4,6 @@ const statusEl = form.querySelector('.status');
 const brandSelect = document.getElementById('brand');
 const modelSelect = document.getElementById('model');
 
-// Предустановленные модели
 const carModels = {
   audi: ["A3", "A4", "A5", "A6", "Q3", "Q5", "Q7"],
   bmw: ["3 Series", "5 Series", "7 Series", "X3", "X5", "X6"],
@@ -13,11 +12,11 @@ const carModels = {
   volkswagen: ["Golf", "Passat", "Tiguan", "Touareg", "Polo"]
 };
 
-// При смене бренда — обновляем модели
+// Update models when brand changes
 brandSelect.addEventListener('change', () => {
   const brand = brandSelect.value;
   modelSelect.innerHTML = '<option value="">Select model...</option>';
-  if (brand && carModels[brand]) {
+  if (carModels[brand]) {
     carModels[brand].forEach(model => {
       const opt = document.createElement('option');
       opt.value = model;
@@ -27,7 +26,7 @@ brandSelect.addEventListener('change', () => {
   }
 });
 
-// Отправка формы
+// Form submit
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   statusEl.hidden = false;
@@ -39,17 +38,16 @@ form.addEventListener('submit', async (e) => {
       headers: { "Accept": "application/json" },
       body: new FormData(form)
     });
-
     if (resp.ok) {
       form.reset();
       statusEl.textContent = "Thank you! Your request has been sent.";
-      statusEl.style.color = "#16a34a"; // green
+      statusEl.style.color = "green";
     } else {
-      statusEl.textContent = "Error: please try again later.";
-      statusEl.style.color = "#dc2626"; // red
+      statusEl.textContent = "Error: please try again.";
+      statusEl.style.color = "red";
     }
   } catch {
-    statusEl.textContent = "Network error. Please check your connection.";
-    statusEl.style.color = "#dc2626";
+    statusEl.textContent = "Network error. Try again later.";
+    statusEl.style.color = "red";
   }
 });
