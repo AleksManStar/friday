@@ -28,15 +28,19 @@ body {
   padding: 80px 20px;
   overflow: hidden;
 }
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
+
+.hero-car {
+  position: absolute;
+  right: -50px;
+  bottom: 0;
+  max-width: 600px;
+  opacity: 0.15;
+  pointer-events: none;
 }
+
 @media (max-width: 900px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
+  .hero-car {
+    display: none;
   }
 }
 .hero h1 {
