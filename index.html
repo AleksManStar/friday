@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Hero Section -->
   <header class="hero">
-    <div class="container hero-grid">
+    <div class="hero-bg"></div>
+    <div class="container hero-card">
       <div class="hero-text">
-        <img src="assets/logo.svg" alt="BSParts.info logo" class="logo">
         <h1>BSParts.info</h1>
         <p class="lead">
           Find <strong>genuine spare parts</strong> from certified manufacturers 
@@ -38,11 +39,24 @@
             <option value="Nissan">Nissan</option>
             <option value="Kia">Kia</option>
             <option value="Hyundai">Hyundai</option>
+            <option value="Volvo">Volvo</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Lexus">Lexus</option>
+            <option value="Peugeot">Peugeot</option>
           </select>
 
           <label for="model">Model</label>
           <select id="model" name="model" required>
             <option value="">Select model</option>
+          </select>
+
+          <label for="otherModel">Other model (if not in list)</label>
+          <input type="text" id="otherModel" name="otherModel" placeholder="Enter model manually">
+
+          <label for="year">Year</label>
+          <select id="year" name="year" required>
+            <option value="">Select year</option>
+            <!-- JS заполнит -->
           </select>
 
           <label for="part">Part you need</label>
@@ -57,28 +71,90 @@
     </div>
   </header>
 
-  <main>
-    <section class="card-section">
-      <h2>Why Choose BSParts.info?</h2>
-      <p>We specialize in providing original OEM parts only, working with official distributors and dealers worldwide.</p>
-    </section>
+  <!-- Why Choose Us -->
+  <section class="card-section features">
+    <h2>Why Choose Us?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src="images/icon-warranty.png" alt="Warranty">
+        <h3>OEM Quality</h3>
+        <p>Only genuine parts from trusted sources.</p>
+      </div>
+      <div class="feature-card">
+        <img src="images/icon-delivery.png" alt="Delivery">
+        <h3>Fast Delivery</h3>
+        <p>Worldwide shipping in days, not weeks.</p>
+      </div>
+      <div class="feature-card">
+        <img src="images/icon-dealer.png" alt="Dealer">
+        <h3>Verified Dealers</h3>
+        <p>We work only with official distributors.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="card-section">
-      <h2>How It Works</h2>
-      <ul>
-        <li>Choose your car brand and model</li>
-        <li>Submit the part request</li>
-        <li>We find the best offers from verified dealers</li>
-        <li>You receive price and delivery options fast</li>
-      </ul>
-    </section>
+  <!-- How It Works -->
+  <section class="card-section steps">
+    <h2>How It Works</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <span class="step-num">1</span>
+        <p>Select your brand and model</p>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <p>Submit your request</p>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <p>We find the best dealer offers</p>
+      </div>
+      <div class="step">
+        <span class="step-num">4</span>
+        <p>Get price & delivery options fast</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="card-section">
-      <h2>Contact Us</h2>
-      <p>Email: support@bsparts.info</p>
-      <p>Phone: +1 (800) 123-4567</p>
-    </section>
-  </main>
+  <!-- Testimonials -->
+  <section class="card-section testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <img src="images/client1.jpg" alt="Client 1">
+        <blockquote>“Found the best price for original Audi brake pads in 24h!”</blockquote>
+        <p class="author">— James P.</p>
+      </div>
+      <div class="testimonial">
+        <img src="images/client2.jpg" alt="Client 2">
+        <blockquote>“Saved 30% on Mercedes parts compared to local dealer.”</blockquote>
+        <p class="author">— Maria L.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="card-section faq">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+      <button class="faq-question">Do you sell used parts?</button>
+      <div class="faq-answer">No, only brand-new original OEM parts.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Do you ship worldwide?</button>
+      <div class="faq-answer">Yes, delivery available in most countries.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How fast is delivery?</button>
+      <div class="faq-answer">From 2 to 7 business days, depending on region.</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 BSParts.info — All rights reserved.</p>
+    <p>Email: support@bsparts.info</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
